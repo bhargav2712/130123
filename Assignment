@@ -1,0 +1,158 @@
+#Question 1
+#include<iostream>
+using namespace std;
+class rectangle
+{
+	int length;
+	int breadth;
+	public:
+		rectangle()
+		{
+			length = 5;
+			breadth = 7;
+		}
+		int getarea()
+		{
+			return length*breadth;
+		}
+};
+int main()
+{
+	rectangle item;
+	cout<<item.getarea();
+}
+
+
+
+#Question 2
+#include<iostream>
+#include<string.h>
+#include<string>
+
+using namespace std;
+class pro2
+{
+	public:
+	pro2()
+		{ 
+		cout<<"I love programming languages"<<endl ;
+		}
+	pro2(char str[])
+		{
+			cout<<"I love "<<str<<endl;
+		}
+	};
+
+int main()
+{
+ pro2 o1;
+ char s[100];
+ cin>>s;
+pro2 o2(s);
+}
+
+
+
+#Question3
+
+#include <iostream>
+using namespace std;
+class Area
+{
+public:
+    void output(int l, int b)
+    {
+        cout<<"Area of Rectangle = "<<l*b<<endl;
+    }
+void output(int a)
+    {
+        cout<<"Area of Square = "<<a*a<< endl;
+    }
+};
+int main()
+{
+    Area obj;
+    obj.output(8,6);
+    obj.output(3);
+}               
+
+
+#Question 4
+#include <iostream>
+#include <string>
+using namespace std;
+class IntegerI
+	{
+	private:
+	int i;
+	public:
+	IntegerI(int i)
+		{
+		this->i=i;
+		}
+	void printNum()
+		{
+		cout<<"i = "<<i<<"\n";
+		}
+};
+class IntegerJ:public IntegerI
+	{
+	private:
+	int j;
+	public:
+	IntegerJ(int i,int j):IntegerI(i)
+		{
+		this->j=j;
+		}
+	void printNum()
+		{
+		IntegerI::printNum();
+		cout<<"j = "<<j<<"\n";
+		}
+};
+int main()
+	{
+	IntegerJ integerJ(4,7);
+	integerJ.printNum();
+	system("pause");
+	return 0;
+	}
+  
+  
+  #Question5
+  #include<iostream>
+#include<string.h>
+#include<string>
+
+using namespace std;
+class student
+{
+string name="unknown";
+int age=0;
+string address="not available";
+	public:
+	 void setinfo(string n,int a)
+		{
+			name=n;
+			age=a;
+			cout<<name<<"\n"<<age<<"\n"<<address<<"\n";
+		}
+void setinfo(string n,int a,string add)
+		{
+			name=n;
+			age=a;
+			address=add;
+			cout<<name<<"\n"<<age<<"\n"<<address<<"\n";
+		}
+};
+
+int main()
+{
+student o1;
+o1.setinfo("Kushagra",20);
+cout<<endl<<endl;
+o1.setinfo("Kushagra",20,"Ghaziabad");
+}
+  
+  
+  
